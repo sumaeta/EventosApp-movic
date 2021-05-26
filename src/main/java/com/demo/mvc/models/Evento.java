@@ -1,7 +1,17 @@
 package com.demo.mvc.models;
 
-public class Evento {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Evento implements Serializable{
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
 	private Long id;
 	private String nome;
 	private String local;
