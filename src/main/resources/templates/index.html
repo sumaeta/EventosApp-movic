@@ -1,8 +1,19 @@
-<html>
-
+<!DOCTYPE html>
+<html xmlms:th="http://thymeleaf.org"
+	  xmlms:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	  
+	  <title>Eventos APP</title>
 <body>
-	<h3>Olá mundo, sou o teste de mvc</h3>
-
+	<h1>Lista de Eventos</h1>
+	<h3><a href="/cadastrarEvento">Cadastror Eventos</a></h3>
+	<div th:each="evento : ${eventos}">
+		<div class="row">
+			<p><span th:text="${evento.nome}"> </span></p>
+			<p><span th:text="${evento.local}"> </span></p>
+			<p><span th:text="${evento.data}"> </span></p>
+			<p><span th:text="${evento.horario}"> </span></p>
+		</div>
+	</div>
 </body>
 
 </html>
