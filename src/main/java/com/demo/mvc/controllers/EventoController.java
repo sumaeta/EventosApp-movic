@@ -27,6 +27,7 @@ public class EventoController {
 		return "redirect:/cadastrarEvento";
 	}
 	
+	
 	@RequestMapping("/eventos")
 	public ModelAndView lista() {
 		ModelAndView mv = new ModelAndView("/index");
