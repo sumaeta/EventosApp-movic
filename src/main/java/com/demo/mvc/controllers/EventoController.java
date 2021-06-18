@@ -14,16 +14,16 @@ public class EventoController {
 	@Autowired
 	private EventoRepository eventoRepository; 
 	
-	@RequestMapping(value="/cadastrarEvento", method=RequestMethod.GET)
+	@RequestMapping(value = "/cadastrarEvento", method = RequestMethod.GET)
 	public String form() {
 		return "evento/formEvento";
 	}
 	
-	@RequestMapping(value="/cadastrarEvento", method=RequestMethod.POST)
+	
+	@RequestMapping(value = "/cadastrarEvento", method = RequestMethod.POST)
 	public String form(Evento evento) {
-		
 		eventoRepository.save(evento);
-		return "redirect:/cadastarEventos";
+		return "redirect:/cadastrarEvento";
 	}
 	
 	
