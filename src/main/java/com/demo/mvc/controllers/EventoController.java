@@ -1,7 +1,5 @@
 package com.demo.mvc.controllers;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,7 +40,7 @@ public class EventoController {
 	@RequestMapping("/{id}")
 	public ModelAndView detalhesEvento(@PathVariable Long id) {
 		Evento evento = eventoRepository.findById(id);
-		ModelAndView mv = new ModelAndView("detalhesEvento");
+		ModelAndView mv = new ModelAndView("evento/detalhesEvento");
 		mv.addObject("evento", evento);
 		return mv;
 	}
